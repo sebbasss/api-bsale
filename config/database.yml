@@ -84,3 +84,11 @@ production:
   database: api_bsale_production
   username: api_bsale
   password: <%= ENV['API_BSALE_DATABASE_PASSWORD'] %>
+
+external_db:
+  adapter: mysql2
+  database: bsale_test
+  username: bsale_test
+  password: bsale_test
+  host: mdb-test.c6vunyturrl6.us-west-1.rds.amazonaws.com
+  encoding: utf8
