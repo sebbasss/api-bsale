@@ -6,8 +6,7 @@ class Api::V1::ProductsController < ApplicationController
   end
 
   def show
-    @product = ExternalProduct.find(params[:id])
+    @product = ExternalProduct.find_by!('id = ?', params[:id])
     render json: @product
   end
-
 end
