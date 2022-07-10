@@ -6,7 +6,8 @@ class Api::V1::ProductsController < ApplicationController
   end
 
   def show
-    @product = ExternalProduct.find_by!('id = ?', params[:id])
-    render json: @product
+    @products = ExternalProduct.where("name LIKE ?", "%" + "#{params[:id]}" + "%")
+    render json: @products
+
   end
 end
