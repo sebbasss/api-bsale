@@ -10,4 +10,5 @@ class Api::V1::CategoriesController < ApplicationController
     @products = ExternalProduct.where('category = ?', @category.id)
     render json: @products
   end
+
 end
