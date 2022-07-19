@@ -85,6 +85,8 @@ production:
   username: api_bsale
   password: <%= ENV['API_BSALE_DATABASE_PASSWORD'] %>
 
+# here I am connecting to the external database in AWS, using the credential given in the instructions
+# later used in the models
 external_db:
   adapter: mysql2
   database: bsale_test
