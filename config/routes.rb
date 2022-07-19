@@ -8,3 +8,7 @@ Rails.application.routes.draw do
     end
   end
 end
+
+# here I defined the routes, adding the api/v1 namespaces so that it can be upgraded in the future,
+# no nesting resources since it was not necessary for the task
+# added a simple root so the api can be deployed on heroku
